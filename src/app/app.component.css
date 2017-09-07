@@ -1,0 +1,21 @@
+
+.baslik{
+    color: #E1FF00;
+    text-align: center;
+}
+.inputGrup{
+    margin-left: 10%;
+}
+.filmInfo{
+    margin: 50px;
+    color: rgba(40, 43, 46, 0.87);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+.bMoive{
+    color: #4D03A5;
+}
+.bQuote{
+    color: #C91426;
+}
+

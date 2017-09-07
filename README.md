@@ -1,6 +1,8 @@
 # FilmSeries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
+its about quotes from your favorite films like “This is your life and its ending one moment at a time.” 
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7. ― Chuck Palahniuk, Fight Club(1999)
 
 ## Development server
 

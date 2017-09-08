@@ -21,7 +21,16 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      
+      "scripts": [
+        "../node_modules/three/build/three.js",
+        "../node_modules/three/examples/js/loaders/ColladaLoader2.js",
+        "../node_modules/three/examples/js/Detector.js",
+        "../node_modules/three/examples/js/controls/OrbitControls.js",
+        "../node_modules/three/examples/js/libs/stats.min.js",
+        "../node_modules/three/examples/js/renderers/CanvasRenderer.js",
+        "../node_modules/three/examples/js/renderers/Projector.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

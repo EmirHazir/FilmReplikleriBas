@@ -1,0 +1,20 @@
+.inputGrup{
+    margin-left: 10%;
+}
+.filmInfo{
+    margin: 50px;
+    color: rgba(40, 43, 46, 0.87);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+.bMoive{
+    color: #4D03A5;
+}
+.bQuote{
+    color: #C91426;
+}
+
+.jumbotron{
+    background-color: rgba(166, 132, 162, 0.38);
+    text-align:center
+}

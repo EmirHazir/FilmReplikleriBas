@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+  <div>
+    <h1 class="baslik">
+      Film Replikleri
+    </h1>
+  </div>
+ 
+</nav>
+
+<div class="container">
+  <div class="col-mg-2">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="col-mg-10">
+
+    <div *ngFor="let video of videos">
+      <div>
+          <iframe width="560" height="315" [src]="video.video | youtube" frameborder="0" allowfullscreen></iframe>
+      </div>    
+    </div>
+  </div>
+
+</div>

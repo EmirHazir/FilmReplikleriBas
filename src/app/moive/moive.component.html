@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="well well-lg">
+    <form (ngSubmit)="onSubmit()" #moiveQuoteForm="ngForm">
+      <div class="inputGrup">
+        <div class="form-group">
+          <label for="quote">Replik </label><br>
+          <input type="text" required class="form-control" placeholder="repliğini yaz" [(ngModel)]="formMoiveQuote.quote" name="quote">
+        </div>
+        <div class="form-group">
+          <label for="moive">Film </label><br>
+          <input type="text" required class="form-control" placeholder="hangi filmden" [(ngModel)]="formMoiveQuote.moive" name="moive">
+        </div>
+
+        <p class="form-control filmInfo" *ngIf="formMoiveQuote.moive && formMoiveQuote.quote">
+          En iyi replik <b class="bMoive">{{formMoiveQuote.moive}}</b> filminden <b class="bQuote">"{{formMoiveQuote.quote}}"</b>.
+        </p>
+
+        <button [disabled]="!moiveQuoteForm.form.valid" 
+        class="btn btn-success pull-right" type="submit">
+        {{formMoiveQuote.$key ? 'Düzenle' : 'Replik Gönder'}}
+        </button>
+        <div class="clearfix"></div>
+
+      </div>
+    </form>
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-warning" style="width: 100%"></div>
+</div>
+
+<div class="container" >
+  <table class="table table-striped table-hover" style="background-color: rgba(102, 186, 153, 0.29);">
+    <thead>
+      <tr>
+        <th>Replikler</th>
+        <th>Filmler</th>
+        <th>Düzenle/Sil</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let moiveQuote of (moiveQuotesStram | async) | reverse">
+        <td>{{moiveQuote.quote}}</td>
+        <td>{{moiveQuote.moive}}</td>
+        <td>
+          <button type="button" class="btn btn-success"
+                  (click)="edit(moiveQuote)">
+          <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+          <button type="button" class="btn btn-danger"
+                  (click)="remove(moiveQuote.$key)">
+              <span class="glyphicon glyphicon-trash"></span>
+              </button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <div class="jumbotron" >
+  <h1>Repliğini sevdiğim</h1>
+  <p>Filmerde aklımızı yediğimiz replikleri yaz. </p>
+</div>
+</div>
